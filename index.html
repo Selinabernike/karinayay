@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina's Birthday Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Welcome to Karina's Birthday Adventure!</h1>
+        <button id="start-game">Start Game</button>
+
+        <div id="level-1" class="level" style="display:none;">
+            <h2>Level 1: Find the Hidden Object</h2>
+            <p>Click the right gift to continue!</p>
+            <div class="gifts">
+                <div class="gift" onclick="checkGift(this, 1)" data-correct="false">🎁</div>
+                <div class="gift" onclick="checkGift(this, 1)" data-correct="true">🎉</div>
+                <div class="gift" onclick="checkGift(this, 1)" data-correct="false">🎂</div>
+            </div>
+        </div>
+
+        <div id="level-2" class="level" style="display:none;">
+            <h2>Level 2: Guess the Character</h2>
+            <p>Who always brightens up a room with their laughter?</p>
+            <button onclick="checkAnswer(2, 'Karina')">Karina</button>
+            <button onclick="checkAnswer(2, 'Not Karina')">Not Karina</button>
+        </div>
+
+        <div id="level-3" class="level" style="display:none;">
+            <h2>Level 3: Navigate the Maze</h2>
+            <p>Guide the star to reach the celebration!</p>
+            <div class="gifts">
+                <div class="gift" onclick="completeLevel(3)">⭐️</div>
+                <div class="gift">🎂</div>
+                <div class="gift">🎈</div>
+            </div>
+        </div>
+
+        <div id="message" style="display:none;">
+            <h1>Happy Birthday, Karina! 🎈</h1>
+            <p>Dear Karina,</p>
+            <p>Today, as we celebrate the wonderful person you are, I just want you to know how deeply loved you are. Your kindness, laughter, and strength light up every room and inspire everyone lucky enough to know you.</p>
+            <p>May this year be filled with new adventures, endless joy, and dreams that come true. You are truly one of a kind, and I am so grateful for every moment shared with you.</p>
+            <p>With all my love and best wishes,</p>
+            <p><strong>From Bernike ❤️</strong></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
